@@ -4,6 +4,8 @@ body{
     padding: 0;
 
     background-color: #edf0f6;
+
+    color: #182034;
 }
 
 header{
@@ -34,19 +36,21 @@ section{
 }
 
 .title{
-    font-size: 38px;
+    font-size: 40px;
 
     width: 950px;
 
     margin-left: auto;
     margin-right: auto;
 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .small-title{
     font-size: 26px;
     margin-bottom: 10px;
+
+    color: #262e42;
 }
 
 /*==== Group ====*/
@@ -54,7 +58,7 @@ section{
     padding: 0;;
 
     width: 100%;
-    height: 200px;
+    height: 170px;
     background-color: white;
 }
 
@@ -66,11 +70,15 @@ section{
     div{
         padding: 15px;
         box-sizing: border-box;
-
         align-content: center;
+
+        .small-title{
+            text-align: center;
+        }
     }
 
     p{  
+        color: #262d3f;
         width: 100%;
 
         font-size: 20px;
@@ -78,11 +86,7 @@ section{
 }
 
 #group-l{
-    background-color: rgba(0, 0, 255, 0.5);
-}
-
-#group-r{
-    background-color: rgba(165, 42, 42, 0.5);
+    background-color: #c7e874;
 }
 
 /*==== Personal ====*/
@@ -98,6 +102,10 @@ section{
 }
 
 .personal-future{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     position: relative;
     width: 100%;
     height: 350px;
@@ -112,8 +120,29 @@ section{
     transform: translateY(-20px)
 }
 
-.name{
-    font-size: 18px;
+.name-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    height: 92%;
+
+    p{
+        font-size: 18px;
+    }
+
+    img{
+        width: 175px;
+        height: 175px;
+
+        border-radius: 5px;
+    }
+}
+
+.personal-button{
+    height: 8%;
+    width: 125px;
 }
 
 footer{
