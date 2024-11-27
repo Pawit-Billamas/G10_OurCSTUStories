@@ -6,6 +6,8 @@ body{
     background-color: #edf0f6;
 
     color: #182034;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -33,12 +35,12 @@ section{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
+
+    box-sizing: border-box;
 }
 
 .title{
     font-size: 40px;
-
-    width: 950px;
 
     margin-left: auto;
     margin-right: auto;
@@ -47,7 +49,7 @@ section{
 }
 
 .small-title{
-    font-size: 26px;
+    font-size: 24px;
     margin-bottom: 10px;
 
     color: #262e42;
@@ -86,10 +88,15 @@ section{
 }
 
 #group-l{
-    background-color: #c7e874;
+    background-color: #bde162;
 }
 
 /*==== Personal ====*/
+.personal{
+
+  
+}
+
 .personal-grid{
     display: grid;
 
@@ -116,9 +123,6 @@ section{
     box-sizing: border-box;
 }
 
-.p-up{
-    transform: translateY(-20px)
-}
 
 .name-img{
     display: flex;
@@ -126,7 +130,7 @@ section{
     align-items: center;
     gap: 5px;
 
-    height: 92%;
+    height: 88%;
 
     p{
         font-size: 18px;
@@ -141,7 +145,7 @@ section{
 }
 
 .personal-button{
-    height: 8%;
+    height: 12%;
     width: 125px;
 }
 
@@ -151,3 +155,64 @@ footer{
     height: 40px;
 }
 
+/* Tab */
+@media (max-width: 1400px){
+    section{
+        width: 900px;;
+    }
+
+    .personal-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* Phone/Tab */
+@media (max-width: 950px){
+    .personal-grid{
+        grid-template-columns: 1fr;
+
+        .personal-future{
+            padding: 20px;
+        }
+    }
+
+    section{
+        width: 85%;
+    }
+}
+
+/* Phone*/
+@media (max-width: 500px){
+    section{
+        width: 95%;
+    }
+
+    .personal-future{
+        padding: 10px;
+    }
+
+    .group{
+        height: auto;
+    }
+
+    .group-grid{
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: auto;
+    }
+
+    #group-l{
+        padding: 5px;
+
+        .small-title{
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    #group-r{
+        word-wrap: break-word;
+        overflow: auto;
+    }
+}
