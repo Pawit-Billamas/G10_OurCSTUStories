@@ -122,6 +122,8 @@ video {
     height: 450px;
     display: grid;
     place-items: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
   }
 
 .headmember {
@@ -138,5 +140,18 @@ video {
     justify-content: center;
 }
 
+.headguestbook {
+    text-align: center;
+    font-size: 250%;
+    color: rgb(255, 252, 240);
+    font-family: 'Marcellus';
+    flex: auto;
+    padding-left: 19%;
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
 
 
