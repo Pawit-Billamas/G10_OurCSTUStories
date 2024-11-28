@@ -8,7 +8,7 @@ body {
 
 .group10 {
     text-align: center;
-    font-size: 3vw; 
+    font-size: 4vw; 
     color: rgb(255, 252, 240);
     font-family: 'Marcellus';
     flex: auto;
@@ -37,7 +37,7 @@ body {
     padding: 10px 20px;
     background-color: transparent;
     color: white;
-    font-family: 'Josefin Sans';
+    font-family: 'Poppins';
     flex-wrap: wrap;
 }
 
@@ -172,7 +172,7 @@ body {
 }
 
 .introtext {
-    font-family: 'Josefin Sans', sans-serif; 
+    font-family: 'Poppins', sans-serif; 
     color: rgb(255, 252, 240);
     font-size: 1vw; 
     text-align: left;
@@ -199,7 +199,7 @@ video {
   .headmember,
   .headguestbook {
       text-align: center;
-      font-size: 1.8vw;
+      font-size: 2.5vw;
       color: rgb(255, 252, 240);
       font-family: 'Marcellus';
       padding: 0%; 
