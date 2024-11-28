@@ -3,6 +3,7 @@ body {
     background-blend-mode: darken;
     align-items: center;
     margin: 0;
+    display:grid;
 }
 
 .group10 {
@@ -39,6 +40,12 @@ body {
     background-color: transparent;
     color: white;
     font-family: 'Josefin Sans';
+    flex-wrap: wrap;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
 }
 
 .nav-left a {
@@ -54,7 +61,6 @@ body {
     color: white;
 }
 
-
 .nav-center {
     position: absolute; 
     left: 50%; 
@@ -67,15 +73,15 @@ body {
 
 .nav-center span {
     font-size: 16px;
+    text-align: center;
 }
 
 .nav-right .join-btn {
     text-decoration: none;
     color: white;
-    background-color: red;
+    background-color: rgb(248, 38, 38);
     padding: 8px 20px;
     border-radius: 20px;
-    border-radius: 20px; 
 
     font-size: 14px;
     font-weight: bold;
@@ -87,6 +93,57 @@ body {
 .nav-right .join-btn:hover {
     background-color: #ff3333;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Change layout to column */
+        align-items: center; /* Align all items in the center */
+        text-align: center; /* Center text */
+    }
+
+    .nav-center {
+        position: static; 
+        transform: none;
+        margin-bottom: 15px; /* Add spacing */
+        order: -1; /* Move .nav-center to the top */
+    }
+
+    .nav-right {
+        order: 0; /* Position .nav-right in the middle */
+        margin-bottom: 15px; /* Add spacing */
+        justify-content: center; /* Center content */
+    }
+
+    .nav-left {
+        order: 1; /* Position .nav-left at the bottom */
+        flex-direction: column; /* Stack links vertically */
+        margin-bottom: 15px; /* Add spacing */
+        justify-content: center; /* Align to center */
+    }
+
+    .nav-left a {
+        margin: 10px 0; /* Space links evenly */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-center span {
+        font-size: 14px; /* Reduce font size for small screens */
+    }
+
+    .nav-right .join-btn {
+        width: 100%; /* Make button take full width */
+        text-align: center; /* Center align text */
+        padding: 10px;
+    }
+
+    .nav-left a {
+        font-size: 12px; /* Reduce font size for links */
+    }
+}
+
+
 
 .globe {
     font-size: 16px;
