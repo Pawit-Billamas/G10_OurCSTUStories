@@ -1,28 +1,26 @@
 body {
-    background:rgba(0,0,0,0.7)url(image/background1.jpg);
+    background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);
     background-blend-mode: darken;
     align-items: center;
     margin: 0;
-    display:grid;
+    display: grid;
 }
 
 .group10 {
     text-align: center;
-    font-size: 500%;
+    font-size: 3vw; 
     color: rgb(255, 252, 240);
     font-family: 'Marcellus';
     flex: auto;
-    padding-left: 19%;
-    padding-right: 20%;
+    padding: 0%; 
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
 }
 
 .group10 h1 {
-    margin-bottom: 0; 
-    margin-top: 0;
+    margin: 0; 
     font-weight: bold;
 }
 
@@ -94,52 +92,76 @@ body {
     background-color: #ff3333;
 }
 
-/* Responsive adjustments */
+@media (min-width: 1025px) {
+    .introtext {
+        font-size: 0.9rem; 
+        text-align: center;
+        padding: 0rem;
+        display: flex;
+    }
+}
+@media (max-width: 1024px) {
+    .introtext {
+        text-align: center;
+        display: flex;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Change layout to column */
-        align-items: center; /* Align all items in the center */
-        text-align: center; /* Center text */
+        flex-direction: column; 
+        align-items: center;
+        text-align: center; 
     }
 
     .nav-center {
         position: static; 
         transform: none;
-        margin-bottom: 15px; /* Add spacing */
-        order: -1; /* Move .nav-center to the top */
+        margin-bottom: 15px; 
+        order: -1; 
     }
 
     .nav-right {
-        order: 0; /* Position .nav-right in the middle */
-        margin-bottom: 15px; /* Add spacing */
-        justify-content: center; /* Center content */
+        order: 0; 
+        margin-bottom: 15px; 
+        justify-content: center; 
     }
 
     .nav-left {
-        order: 1; /* Position .nav-left at the bottom */
-        flex-direction: column; /* Stack links vertically */
-        margin-bottom: 15px; /* Add spacing */
-        justify-content: center; /* Align to center */
+        order: 1;
+        flex-direction: column; 
+        margin-bottom: 15px;
+        justify-content: center; 
     }
 
     .nav-left a {
-        margin: 10px 0; /* Space links evenly */
+        margin: 10px 0; 
+    }
+
+    .introtext {
+        display: grid;
+        padding: 0.6rem;
     }
 }
 
 @media (max-width: 480px) {
     .nav-center span {
-        font-size: 14px; /* Reduce font size for small screens */
+        font-size: 14px;
     }
 
     .nav-right .join-btn {
-        width: 100%; /* Make button take full width */
-        text-align: center; /* Center align text */
+        width: 100%; 
+        text-align: center; 
         padding: 10px;
     }
 
     .nav-left a {
-        font-size: 12px; /* Reduce font size for links */
+        font-size: 12px; 
+    }
+
+    .introtext { 
+        text-align: center;
+        padding: 0.5rem;
     }
 }
 
@@ -150,22 +172,13 @@ body {
 }
 
 .introtext {
-    font-family: 'Josefin Sans';
-    color: white;
-    font-size: 14px;
-    text-align: left;
-    color:rgb(255, 252, 240);
-    margin-block-end: 0px;
-    margin-block-start: 0px;
-}
-
-.introtext p {
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans', sans-serif; 
     color: rgb(255, 252, 240);
-    font-size: 14px;
+    font-size: 1vw; 
     text-align: left;
-    margin-block-end: 0px;
-    margin-block-start: 0px;
+    margin: 0rem;
+    padding: 0rem;
+    line-height: 1.6;
 }
 
 video {
@@ -175,40 +188,28 @@ video {
   }
 
 .container {
-    width: 800px;
-    height: 450px;
+    width: 90%; 
+    max-width: 800px; 
+    height: auto;
     display: grid;
     place-items: center;
-    padding-top: 5%;
-    padding-bottom: 10%;
+    padding: 0%; 
   }
 
-.headmember {
+  .headmember,
+  .headguestbook {
+      text-align: center;
+      font-size: 1.8vw;
+      color: rgb(255, 252, 240);
+      font-family: 'Marcellus';
+      padding: 0%; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+.box1 , .box2 {
+    padding: 3px;
     text-align: center;
-    font-size: 250%;
-    color: rgb(255, 252, 240);
-    font-family: 'Marcellus';
-    flex: auto;
-    padding-left: 19%;
-    padding-right: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
 }
-
-.headguestbook {
-    text-align: center;
-    font-size: 250%;
-    color: rgb(255, 252, 240);
-    font-family: 'Marcellus';
-    flex: auto;
-    padding-left: 19%;
-    padding-right: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-}
-
-
