@@ -3,9 +3,10 @@ body{
     margin: 0;
     padding: 0;
 
-    background-color: #edf0f6;
+    background:rgba(0,0,0,0.5)url(./images/background1.jpg);
+    background-blend-mode: darken;
 
-    color: #182034;
+    color: white;
 
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -41,7 +42,7 @@ section{
 
 .title{
     position: relative;
-    font-size: 40px;
+    font-size: 45px;
 
     margin-left: auto;
     margin-right: auto;
@@ -60,7 +61,7 @@ section{
 
         height: 120%;
         width: 1200px;
-        background-color: #262e42;
+        /* background-color: rgb(224, 66, 66); */
     }
 }
 
@@ -72,7 +73,7 @@ section{
 
     z-index: 10;
 
-    color: #1d2a51;
+    color: white;
     font-weight: bold;
     transition: 0.5s;
 }
@@ -80,14 +81,17 @@ section{
 /*==== Group ====*/
 .group{
     margin-top: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
 
     padding: 0;;
 
     width: 100%;
-    height: 170px;
+    height: 150px;
     background-color: white;
 
+    .small-title{
+        color: white;
+    }
 }
 
 .group-grid{
@@ -114,7 +118,7 @@ section{
 }
 
 #group-l{
-    background: linear-gradient(90deg, rgba(189,225,98,1) 0%, rgba(189, 225, 98, 0.65) 100%);
+    background: linear-gradient(90deg, rgb(224, 66, 66) 0%, rgb(224, 66, 66, 0.75) 100%);
     transition: 0.5s;
 }
 
@@ -123,19 +127,22 @@ section{
     overflow: auto;
     transition: 0.5s;
 
+    background-color: white;
+    
     p{
         font-size: 16px;
+        color: #272727;
     }
 }
 
 
 .group:hover{
     #group-r{
-        background-color: #262e42;
+        /* background-color: #262e42; */
         
         p{
             font-size: 16.25px;
-            color: #d0d0da;
+            /* color: #d0d0da; */
             transition: 0.5s;
         }
 
@@ -143,7 +150,7 @@ section{
     }
 
     #group-l{
-        background: linear-gradient(90deg, rgba(189,225,98,0.65) 0%, rgba(189, 225, 98, 1) 100%);
+        background: linear-gradient(90deg, rgba(224, 66, 66,0.75) 0%, rgba(224, 66, 66, 1) 100%);
         transition: 0.5s;
 
         .small-title{
@@ -157,6 +164,10 @@ section{
 
 /*==== Personal ====*/
 .personal{
+    width: 100%;
+}
+
+.personal-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -179,6 +190,7 @@ section{
     justify-items: center;
 
     gap: 2%;
+
 }
 
 .personal-future{
@@ -192,14 +204,16 @@ section{
     
     padding: 20px;
 
-    background-color: white;
+    background: white;
+    color: black;
+
     box-sizing: border-box;
 
     bottom: 0px;
     transition: 0.5s;
 }
 
-.personal .small-title{
+.personal-container .small-title{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -222,8 +236,8 @@ section{
 
     img{
         opacity: 1;
-        width: 150px;
-        height: 150px;
+        width: 175px;
+        height: 175px;
         border-style: none;
 
         border-radius: 5px;
@@ -242,7 +256,7 @@ section{
     overflow: auto;
 
     opacity: 0;
-    color: #182034a4;
+    color:#272727;
     
     transition: 0.3s ease;
 
@@ -262,7 +276,7 @@ section{
 
     
 }
-.personal:has(.personal-future:hover){
+.personal-container:has(.personal-future:hover){
     .small-title{
         font-size: 24.5px;
         transition: 0.5s;
@@ -271,26 +285,11 @@ section{
 
 .personal-future:hover{
     color: white;
-    background-color: #171d2f;
+    background: rgb(224, 66, 66);
     transition: 0.5s;
 
-    box-shadow: 5px 7px 8px -1px rgba(0, 0, 0, 0.54);
+    box-shadow: 5px 7px 8px -1px rgba(176, 176, 176, 0.54);
     bottom: 2.5px;
-
-    .button{
-        background-color: #bde162;
-        color: #171d2f;
-        transition: 0.5s;
-    }
-
-    .button:hover{
-        border-style: solid;
-        border-color: white;
-    }
-
-    .button:active{
-        background-color: rgb(231, 231, 231);
-    }
     
     .name-img p{
         font-size: 18.25px;
@@ -298,7 +297,7 @@ section{
     }
 
     .name-img .hidden-info{
-        color: #d0d0da;
+        color: #dfdfdf;
         font-size: 16.25px;
 
         transition: font-size 0.5s;
@@ -311,8 +310,8 @@ section{
     height: 12%;
     width: 125px;
 
-    background-color: white;
-    color: #171d2f;
+    background-color: rgb(28, 28, 28);
+    color: white;
 
     border-style: solid;
     border-color: rgb(23, 29, 47, 0.2);
@@ -320,48 +319,35 @@ section{
 }
 
 .button:hover{
-    background-color: #bde162;
+    border-color: white;
+    border-style: solid;
 }
 
 .button:active{
-    background-color: #a7c657;
+    background-color: white;
+    color: black;
 }
+
 
 #openall-button{
     border-style: none;
 
-    background-color: #bde162;
+    background-color: rgb(224, 66, 66);
+    color: white;
 
     height: 25px;
     width: 100px;
 }
 
 #openall-button:hover{
-    border-color: #a7c657;
+    border-color: white;
     border-style: solid;
 }
 
 
 #openall-button:active{
-    background-color: #a7c657;
-}
-
-.personal-future.black{
-    color: white;
-    background-color: #171d2f;
-
-    .button{
-        background-color: #bde162;
-        color: #171d2f;
-    }
-
-    .button:hover{
-        background-color: white;
-    }
-
-    .button:active{
-        background-color: rgb(231, 231, 231);
-    }
+    background-color: white;
+    color: black;
 }
 
 
@@ -412,11 +398,11 @@ footer{
     }
 
     .title div{
+        width: 100%;
         right: 0%;
-        width: 1200%;
     }
 
-    .personal{
+    .personal-container{
         .small-title{
             margin-bottom: 5px;
         }
