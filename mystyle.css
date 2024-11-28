@@ -58,13 +58,13 @@ body {
     font-size: 16px;
 }
 
-/* ขวา: ปุ่ม */
+
 .nav-right .join-btn {
     text-decoration: none;
     color: white;
     background-color: red;
     padding: 8px 20px;
-    border-radius: 20px; /* ทำให้ปุ่มเป็นวงรี */
+    border-radius: 20px; 
     font-size: 14px;
     font-weight: bold;
     display: flex;
