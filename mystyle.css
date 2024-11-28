@@ -11,7 +11,13 @@ body {
     flex: auto;
     font-weight: bold;
     top: 50% ;
-    transform: translateY(-45%); 
+    transform: translateY(-45%);
+    padding-left: 19%;
+    padding-right: 20%;
+}
+
+.group10 h1 {
+    margin-bottom: 0; 
 }
 
 .startext {
@@ -58,13 +64,12 @@ body {
     font-size: 16px;
 }
 
-/* ขวา: ปุ่ม */
 .nav-right .join-btn {
     text-decoration: none;
     color: white;
     background-color: red;
     padding: 8px 20px;
-    border-radius: 20px; /* ทำให้ปุ่มเป็นวงรี */
+    border-radius: 20px;
     font-size: 14px;
     font-weight: bold;
     display: flex;
@@ -79,3 +84,25 @@ body {
 .globe {
     font-size: 16px;
 }
+
+.introtext {
+    font-family: 'Josefin Sans';
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    color:rgb(255, 252, 240);
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+}
+
+.introtext p {
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
+
