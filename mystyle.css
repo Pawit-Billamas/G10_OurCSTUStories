@@ -1,1 +1,81 @@
+body {
+    background:rgba(0,0,0,0.7)url(image/background1.jpg);
+    background-blend-mode: darken;
+}
 
+.group10 {
+    text-align: center;
+    font-size: 500%;
+    color:rgb(255, 252, 240);
+    font-family:'Marcellus';
+    flex: auto;
+    font-weight: bold;
+    top: 50% ;
+    transform: translateY(-45%); 
+}
+
+.startext {
+    color: rgb(248, 38, 38);
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative; 
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Josefin Sans';
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: white;
+    margin: 20px; 
+    font-size: 14px;
+}
+
+.nav-left a::before {
+    content: "•"; 
+    margin-right: 5px;
+    color: white;
+}
+
+
+.nav-center {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.nav-center span {
+    font-size: 16px;
+}
+
+/* ขวา: ปุ่ม */
+.nav-right .join-btn {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 8px 20px;
+    border-radius: 20px; /* ทำให้ปุ่มเป็นวงรี */
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-right .join-btn:hover {
+    background-color: #ff3333;
+}
+
+.globe {
+    font-size: 16px;
+}
