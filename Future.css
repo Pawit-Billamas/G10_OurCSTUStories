@@ -24,14 +24,14 @@ header{
 main{
     padding-top: 80px;
     width: 100%;
-    
+    overflow: auto;
 }
-
 
 section{
     padding: 10px;
 
-    width: 950px;
+    height: auto;
+    width: 1100px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
@@ -40,28 +40,54 @@ section{
 }
 
 .title{
+    position: relative;
     font-size: 40px;
 
     margin-left: auto;
     margin-right: auto;
 
     margin-bottom: 25px;
+    
+    font-weight: bold;
+
+    color: white;
+
+    div{
+        position: absolute;
+        right: 50%;
+        top: -10%;
+        z-index: -2;
+
+        height: 120%;
+        width: 1200px;
+        background-color: #262e42;
+    }
 }
 
 .small-title{
     font-size: 24px;
-    margin-bottom: 10px;
 
-    color: #262e42;
+    padding: 5px 0;
+    box-sizing: border-box;
+
+    z-index: 10;
+
+    color: #1d2a51;
+    font-weight: bold;
+    transition: 0.5s;
 }
 
 /*==== Group ====*/
 .group{
+    margin-top: 60px;
+    margin-bottom: 30px;
+
     padding: 0;;
 
     width: 100%;
     height: 170px;
     background-color: white;
+
 }
 
 .group-grid{
@@ -88,13 +114,60 @@ section{
 }
 
 #group-l{
-    background-color: #bde162;
+    background: linear-gradient(90deg, rgba(189,225,98,1) 0%, rgba(189, 225, 98, 0.65) 100%);
+    transition: 0.5s;
 }
+
+#group-r{
+    word-wrap: break-word;
+    overflow: auto;
+    transition: 0.5s;
+
+    p{
+        font-size: 16px;
+    }
+}
+
+
+.group:hover{
+    #group-r{
+        background-color: #262e42;
+        
+        p{
+            font-size: 16.25px;
+            color: #d0d0da;
+            transition: 0.5s;
+        }
+
+        transition: 0.5s;
+    }
+
+    #group-l{
+        background: linear-gradient(90deg, rgba(189,225,98,0.65) 0%, rgba(189, 225, 98, 1) 100%);
+        transition: 0.5s;
+
+        .small-title{
+            font-size: 24.5px;
+            transition: 0.5s;
+        }
+
+    }
+} 
+
 
 /*==== Personal ====*/
 .personal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-wrap: wrap;
 
-  
+    margin-top: 100px;
+
+    .small-title{
+        height: 60px;
+    }
 }
 
 .personal-grid{
@@ -105,7 +178,7 @@ section{
     align-items: center;
     justify-items: center;
 
-    gap: 15px;
+    gap: 2%;
 }
 
 .personal-future{
@@ -117,12 +190,20 @@ section{
     width: 100%;
     height: 350px;
     
-    padding: 30px;
+    padding: 20px;
 
     background-color: white;
     box-sizing: border-box;
+
+    bottom: 0px;
+    transition: 0.5s;
 }
 
+.personal .small-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .name-img{
     display: flex;
@@ -132,22 +213,157 @@ section{
 
     height: 88%;
 
+    
     p{
         font-size: 18px;
+        font-weight: bold;
+        transition: font-size 0.5s;
     }
 
     img{
-        width: 175px;
-        height: 175px;
+        opacity: 1;
+        width: 150px;
+        height: 150px;
+        border-style: none;
 
         border-radius: 5px;
+
+        transition: 0.5s ease;
     }
 }
 
-.personal-button{
+.name-img .hidden-info{
+    height: 50%;
+    width: 80%;
+    position: absolute;
+
+    top: 20%;
+    word-wrap: break-word;
+    overflow: auto;
+
+    opacity: 0;
+    color: #182034a4;
+    
+    transition: 0.3s ease;
+
+    font-size: 16px;
+}
+
+.name-img.active{
+    img{
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+
+    .hidden-info{
+        opacity: 1;
+        transition: 0.5s ease;
+    }
+
+    
+}
+.personal:has(.personal-future:hover){
+    .small-title{
+        font-size: 24.5px;
+        transition: 0.5s;
+    }
+}
+
+.personal-future:hover{
+    color: white;
+    background-color: #171d2f;
+    transition: 0.5s;
+
+    box-shadow: 5px 7px 8px -1px rgba(0, 0, 0, 0.54);
+    bottom: 2.5px;
+
+    .button{
+        background-color: #bde162;
+        color: #171d2f;
+        transition: 0.5s;
+    }
+
+    .button:hover{
+        border-style: solid;
+        border-color: white;
+    }
+
+    .button:active{
+        background-color: rgb(231, 231, 231);
+    }
+    
+    .name-img p{
+        font-size: 18.25px;
+        transition: font-size 0.5s;
+    }
+
+    .name-img .hidden-info{
+        color: #d0d0da;
+        font-size: 16.25px;
+
+        transition: font-size 0.5s;
+    }
+}
+
+
+.button{
+    font-size: 12px;
     height: 12%;
     width: 125px;
+
+    background-color: white;
+    color: #171d2f;
+
+    border-style: solid;
+    border-color: rgb(23, 29, 47, 0.2);
+    font-weight: bold;
 }
+
+.button:hover{
+    background-color: #bde162;
+}
+
+.button:active{
+    background-color: #a7c657;
+}
+
+#openall-button{
+    border-style: none;
+
+    background-color: #bde162;
+
+    height: 25px;
+    width: 100px;
+}
+
+#openall-button:hover{
+    border-color: #a7c657;
+    border-style: solid;
+}
+
+
+#openall-button:active{
+    background-color: #a7c657;
+}
+
+.personal-future.black{
+    color: white;
+    background-color: #171d2f;
+
+    .button{
+        background-color: #bde162;
+        color: #171d2f;
+    }
+
+    .button:hover{
+        background-color: white;
+    }
+
+    .button:active{
+        background-color: rgb(231, 231, 231);
+    }
+}
+
 
 footer{
     background-color: black;
@@ -165,6 +381,9 @@ footer{
         grid-template-columns: 1fr 1fr;
     }
 
+    .title div{
+        right: 25%;
+    }
 }
 
 /* Phone/Tab */
@@ -180,12 +399,32 @@ footer{
     section{
         width: 85%;
     }
+
+    .title div{
+        right: 5%;
+    }
 }
 
 /* Phone*/
 @media (max-width: 500px){
     section{
         width: 95%;
+    }
+
+    .title div{
+        right: 0%;
+        width: 1200%;
+    }
+
+    .personal{
+        .small-title{
+            margin-bottom: 5px;
+        }
+
+        #openall-button{
+            margin-left: 20px;
+            width: 80px;
+        }
     }
 
     .personal-future{
@@ -203,8 +442,7 @@ footer{
     }
 
     #group-l{
-        padding: 5px;
-
+        padding: 10px;
         .small-title{
             padding: 0;
             margin: 0;
