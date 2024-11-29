@@ -1,14 +1,21 @@
-let buttons = document.querySelectorAll(".button");
+let profileButtons = [];
 let openAllButton = document.getElementById("openall-button");
+let debounce = false;
+
+document.querySelectorAll(".button").forEach(button =>{
+    let name_img = button.parentElement.getElementsByClassName("name-img")[0];
+    if(!name_img){return}
+
+    profileButtons.push(button);
+})
 
 
 function updateOpenAllButton(){
     let checkHide = false;
     let checkShow = false;
-    buttons.forEach(button1 => {
-
-        if (button1.innerHTML == "Show") checkShow = true;
-        else if(button1.innerHTML == "Hide") checkHide = true;
+    profileButtons.forEach(button => {
+        if (button.innerHTML == "Show") checkShow = true;
+        else if(button.innerHTML == "Hide") checkHide = true;
     })
 
     if(checkShow == false) openAllButton.innerHTML = "Hide all";
@@ -16,46 +23,58 @@ function updateOpenAllButton(){
 }
 
 
-buttons.forEach(button => {
+function activeButton(button){
+    let name_img = button.parentElement.getElementsByClassName("name-img")[0];
+    if(!name_img){return}
+
+    name_img.classList.toggle("active");
+
+    if (button.innerHTML == "Show") button.innerHTML = "Hide"; 
+    else if (button.innerHTML == "Hide") button.innerHTML = "Show";
+}
+
+
+profileButtons.forEach(button => {
     button.addEventListener("click", function(event) {
         console.log("Clickkkkkkkkkk")
-        let name_img = button.parentElement.getElementsByClassName("name-img")[0];
-        if(!name_img){return}
 
-        name_img.classList.toggle("active");
-
-        if (button.innerHTML == "Show") button.innerHTML = "Hide";
-        else if (button.innerHTML == "Hide") button.innerHTML = "Show";
-
-  
+        activeButton(button)
         updateOpenAllButton()
     })
 })
 
 openAllButton.addEventListener("click", function(event){
-    buttons.forEach(button => {
+    if(debounce == true) return;
+    debounce = true;
+
+    for(let i = 0; i < profileButtons.length; i++){
+        let button = profileButtons[i];
+
         let name_img = button.parentElement.getElementsByClassName("name-img")[0];
-        if(!name_img){return}
+        if(!name_img) continue;
 
         let img = name_img.getElementsByTagName("img")[0];
-        if(!img){return}
+        if(!img) continue;
  
         let computedStyle = window.getComputedStyle(img);
         
-
         if(openAllButton.innerHTML == "Show all"){
-            if (computedStyle.opacity != 1) {return}
+            if (computedStyle.opacity != 1) continue;
             button.innerHTML = "Hide"
             name_img.classList.toggle("active");
         }
         else{
-            if (computedStyle.opacity != 0) {return}
+            if (computedStyle.opacity != 0) continue;
             button.innerHTML = "Show"
             name_img.classList.toggle("active");
         }
-    })
+    }
+
 
     if (openAllButton.innerHTML == "Show all") openAllButton.innerHTML = "Hide all";
     else if (openAllButton.innerHTML == "Hide all") openAllButton.innerHTML = "Show all";
 
+    setTimeout(() => {
+        debounce = false;
+      }, 500);
 })
