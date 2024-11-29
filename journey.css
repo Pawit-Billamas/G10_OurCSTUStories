@@ -118,3 +118,29 @@ body{
     font-family: Marcellus;
     font-size: 30px;
 }
+
+.JourneyandHigh {
+    text-align: left;
+    font-size: 4vw; 
+    color: rgb(255, 252, 240);
+    font-family: 'Marcellus';
+    flex: auto;
+    padding: 5%; 
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+
+.JourneyBegins {
+    text-align: center;
+    font-size: 2.5vw;
+    color: rgb(255, 252, 240);
+    font-family: 'Marcellus';
+    padding: 0%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F82626;
+}
