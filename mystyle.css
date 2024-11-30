@@ -66,18 +66,44 @@ body {
     color: rgb(248, 38, 38); 
 }
 
-.link-110.no-hover:hover {
-    transform: none; 
-    color: inherit; 
-  }
-
-.topnav a.no-hover:hover {
-    color: #f2f2f2 !important; 
-    animation: none !important; 
-    text-shadow: none !important; 
-    transition: none !important; 
+.topnav a.no-hover {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff; 
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: transparent;
+    border: 3px solid transparent;
 }
-
+  
+.topnav a.no-hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #f09a1a, #e49191, #e06f3b, #ff9a00);
+    background-size: 300% 300%;
+    animation: border-glow 3s linear infinite;
+    z-index: -1;
+}
+  
+@keyframes border-glow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
   
 @keyframes neonFlicker {
     0%, 100% {
