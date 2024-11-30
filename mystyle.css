@@ -136,10 +136,17 @@ body {
         text-align: center;
     }
 
-    video {
-        width: 90%; 
-        max-width: 500px; 
+    .vidbackground-image {
+        height: 90%; /* ครอบคลุมหน้าจอ */
+        width: 100%;
+        background-size: cover; /* ใช้ cover สำหรับภาพ */
     }
+
+    video {
+        width: 90%; /* ปรับขนาดวิดีโอให้เหมาะกับหน้าจอเล็ก */
+        max-width: none; /* ปรับให้วิดีโอไม่จำกัดความกว้างสูงสุด */
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -148,9 +155,15 @@ body {
         padding: 0.5rem;
     }
 
+    .vidbackground-image {
+        height: 90%; /* ครอบคลุมหน้าจอมือถือ */
+        width: 100%;
+        background-size: cover; /* ใช้ cover สำหรับภาพ */
+    }
+
     video {
-        width: 95%; 
-        max-width: 400px;
+        width: 90%; /* ทำให้วิดีโอปรับขนาดเต็มจอมือถือ */
+        max-width: none;
     }
 }
 
@@ -169,24 +182,39 @@ body {
 }
 
 video {
-    width: 90%; 
-    height: auto; 
-    max-width: 600px; 
+    width: 100%; /* ปรับให้วิดีโอมีความกว้างเต็มพื้นที่ของ container */
+    max-width: 800px; /* จำกัดความกว้างสูงสุด */
+    height: auto; /* ให้ความสูงปรับตามอัตราส่วนของวิดีโอ */
     cursor: pointer;
-    border-radius: 0px; 
+    position: relative; /* ตั้งค่าวิดีโอให้มีค่า z-index ปกติ */
+    z-index: 1; /* ให้วิดีโออยู่ข้างหน้าภาพ */
   }
 
 .container {
-    width: 100%;
-    max-width: 800px; 
-    height: auto; 
+    position: relative; /* เพื่อให้การตั้งค่า z-index ใช้ได้ */
+    width: 90%;
+    max-width: 800px;
+    height: auto;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    padding: 20px; 
-    margin: 0 auto; 
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 0 auto;
     box-sizing: border-box;
   }
+
+.vidbackground-image {
+    position: absolute; /* ทำให้ภาพอยู่ด้านหลัง */
+    top: 0;
+    left: 0;
+    width: 100%; /* ครอบคลุมความกว้างทั้งหมด */
+    height: 100%; /* ครอบคลุมความสูงของ container */
+    background-image: url('image/vidbg2.png'); /* กำหนดที่อยู่ของภาพ */
+    background-size: contain; /* ปรับขนาดให้ครอบคลุมพื้นที่ทั้งหมด */
+    background-position: center; /* จัดตำแหน่งภาพให้อยู่ตรงกลาง */
+    z-index: -1; /* ให้ภาพอยู่ข้างหลัง */
+    background-repeat: no-repeat;
+}
 
 .headmember,
 .headguestbook {
