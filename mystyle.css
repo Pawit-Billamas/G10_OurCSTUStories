@@ -241,47 +241,71 @@ video {
 /*start member*/
 
 .baby{
-    width: 300px;
+    width: 100%; 
+    max-width: 300px; 
 }
-.box-baby:hover .baby{
+
+.box-baby {
+    position: relative;
+    width: 100%;
+    max-width: 300px; 
+}
+
+.box-baby:hover .baby {
     filter: blur(5px);
     z-index: 0;
-    transition: filter 0.8 ease;
+    transition: filter 0.8s ease;
 }
-.box-baby{
-    position: relative;
-    width: auto;
-    width: 300px;
-}
-.info{
+
+.info {
     position: absolute;
-    font-size: 35px;
+    font-size: 1.5rem; 
     text-align: center;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     opacity: 0;
     z-index: 99;
 }
-.info:hover{
-    position: absolute;
-    font-size: 35px;
-    text-align: center;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
+
+.info:hover {
     opacity: 0.8;
-    transition: 0.8s;
-    z-index: 99;
+    transition: opacity 0.8s;
 }
-.box-containers{
+
+.box-containers {
     width: 100%;
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
 
-/*end member/
+@media (max-width: 1024px) {
+    .box-containers {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .box-containers {
+        grid-template-columns: 1fr; 
+    }
+
+    .info {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .box-containers {
+        grid-template-columns: 1fr; 
+    }
+
+    .info {
+        font-size: 0.9rem; 
+    }
+}
+
+/*end member*/
