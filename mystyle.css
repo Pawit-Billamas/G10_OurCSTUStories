@@ -1,4 +1,4 @@
-/*start css ส่วนบนสุด ฟ้าทำ*/
+/*start group10 ฟ้าทำ*/
 
 body {
     background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);
@@ -236,4 +236,52 @@ video {
     text-align: center;
 }
 
-/*end css ส่วนบนสุด ฟ้าทำ*/
+/*end group10 ฟ้าทำ*/
+
+/*start member*/
+
+.baby{
+    width: 300px;
+}
+.box-baby:hover .baby{
+    filter: blur(5px);
+    z-index: 0;
+    transition: filter 0.8 ease;
+}
+.box-baby{
+    position: relative;
+    width: auto;
+    width: 300px;
+}
+.info{
+    position: absolute;
+    font-size: 35px;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0;
+    z-index: 99;
+}
+.info:hover{
+    position: absolute;
+    font-size: 35px;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0.8;
+    transition: 0.8s;
+    z-index: 99;
+}
+.box-containers{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+/*end member/
