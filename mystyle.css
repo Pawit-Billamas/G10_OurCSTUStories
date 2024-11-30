@@ -1,3 +1,5 @@
+/*start css ส่วนบนสุด ฟ้าทำ*/
+
 body {
     background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);
     background-blend-mode: darken;
@@ -137,14 +139,14 @@ body {
     }
 
     .vidbackground-image {
-        height: 90%; /* ครอบคลุมหน้าจอ */
+        height: 90%; 
         width: 100%;
-        background-size: cover; /* ใช้ cover สำหรับภาพ */
+        background-size: cover; 
     }
 
     video {
-        width: 90%; /* ปรับขนาดวิดีโอให้เหมาะกับหน้าจอเล็ก */
-        max-width: none; /* ปรับให้วิดีโอไม่จำกัดความกว้างสูงสุด */
+        width: 90%; 
+        max-width: none; 
     }
 
 }
@@ -156,13 +158,13 @@ body {
     }
 
     .vidbackground-image {
-        height: 90%; /* ครอบคลุมหน้าจอมือถือ */
+        height: 90%;
         width: 100%;
-        background-size: cover; /* ใช้ cover สำหรับภาพ */
+        background-size: cover; 
     }
 
     video {
-        width: 90%; /* ทำให้วิดีโอปรับขนาดเต็มจอมือถือ */
+        width: 90%;
         max-width: none;
     }
 }
@@ -182,16 +184,16 @@ body {
 }
 
 video {
-    width: 100%; /* ปรับให้วิดีโอมีความกว้างเต็มพื้นที่ของ container */
-    max-width: 800px; /* จำกัดความกว้างสูงสุด */
-    height: auto; /* ให้ความสูงปรับตามอัตราส่วนของวิดีโอ */
+    width: 100%;
+    max-width: 800px;
+    height: auto; 
     cursor: pointer;
-    position: relative; /* ตั้งค่าวิดีโอให้มีค่า z-index ปกติ */
-    z-index: 1; /* ให้วิดีโออยู่ข้างหน้าภาพ */
+    position: relative; 
+    z-index: 1; 
   }
 
 .container {
-    position: relative; /* เพื่อให้การตั้งค่า z-index ใช้ได้ */
+    position: relative; 
     width: 90%;
     max-width: 800px;
     height: auto;
@@ -204,15 +206,15 @@ video {
   }
 
 .vidbackground-image {
-    position: absolute; /* ทำให้ภาพอยู่ด้านหลัง */
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%; /* ครอบคลุมความกว้างทั้งหมด */
-    height: 100%; /* ครอบคลุมความสูงของ container */
-    background-image: url('image/vidbg2.png'); /* กำหนดที่อยู่ของภาพ */
-    background-size: contain; /* ปรับขนาดให้ครอบคลุมพื้นที่ทั้งหมด */
-    background-position: center; /* จัดตำแหน่งภาพให้อยู่ตรงกลาง */
-    z-index: -1; /* ให้ภาพอยู่ข้างหลัง */
+    width: 100%; 
+    height: 100%;
+    background-image: url('image/vidbg2.png'); 
+    background-size: contain; 
+    background-position: center;
+    z-index: -1;
     background-repeat: no-repeat;
 }
 
@@ -233,3 +235,5 @@ video {
     padding: 3px;
     text-align: center;
 }
+
+/*end css ส่วนบนสุด ฟ้าทำ*/
