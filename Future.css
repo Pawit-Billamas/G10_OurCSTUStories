@@ -8,24 +8,11 @@ body{
 
     color: white;
 
+    font-family: 'Marcellus';
     /* font-family: Arial, Helvetica, sans-serif; */
 }
 
-header{
-    position: fixed;
-    
-    z-index: 100;
 
-    height: 50px;
-    width: 100%;
-
-    background-color: black;
-}
-
-main{
-    padding-top: 80px;
-    width: 100%;
-}
 
 section{
     padding: 10px;
@@ -35,18 +22,23 @@ section{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
+    margin-top: 25px;
 
     box-sizing: border-box;
 }
 
 .title{
     position: relative;
-    font-size: 45px;
+    font-size: 60px;
+    /* font-size: 2em !important;  */
 
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 
-    margin-bottom: 25px;
+    padding: 0 20px;
+
+    margin-bottom: 120px;
     
     font-weight: bold;
 
@@ -65,7 +57,7 @@ section{
 }
 
 .small-title{
-    font-size: 24px;
+    font-size: 36px;
 
     padding: 5px 0;
     box-sizing: border-box;
@@ -74,12 +66,31 @@ section{
 
     color: white;
     font-weight: bold;
+
     transition: 0.5s;
+
+    p{
+        margin: 0;
+
+        .startext{
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .red-text{
+        font-size: 50px;
+        color: rgb(248, 38, 38);
+    }
+
+    .white-text{
+        font-size: 50px;
+        color: rgb(255, 255, 255);
+    }
 }
 
 /*==== Group ====*/
 .group{
-    margin-top: 60px;
     margin-bottom: 0;
 
     padding: 0;;
@@ -89,7 +100,12 @@ section{
     background-color: white;
 
     .small-title{
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(255, 255, 255, 0.75);
+
         color: white;
+        text-align: center;
     }
 }
 
@@ -102,32 +118,37 @@ section{
         padding: 15px;
         box-sizing: border-box;
         align-content: center;
-
-        .small-title{
-            text-align: center;
-        }
     }
 
     p{  
+        margin: 0;
+        padding: 10px;
+        padding-top: auto;
+        padding-bottom: auto;
         color: #262d3f;
-        width: 100%;
+        width: auto;
+
+        box-sizing: border-box;
 
         font-size: 20px;
     }
 }
 
 #group-l{
-    background: linear-gradient(90deg, rgb(224, 66, 66) 0%, rgb(224, 66, 66, 0.85) 100%);
+    background: linear-gradient(90deg, rgb(224, 66, 66) 0%, rgb(224, 66, 66, 0.95) 100%);
 }
 
 #group-r{
-    word-wrap: break-word;
     overflow: auto;
-    transition: 0.5s;
+    word-wrap: break-word;
 
     background-color: white;
-    
+    transition: 0.5s;
+
     p{
+        padding-top: 0;
+        padding-bottom: 0;
+
         font-size: 16px;
         color: #272727;
     }
@@ -137,7 +158,6 @@ section{
 .group:hover{
     #group-r{
         /* background-color: #262e42; */
-        
         p{
             font-size: 16.25px;
             /* color: #d0d0da; */
@@ -147,10 +167,10 @@ section{
     }
 
     #group-l{
-        background: linear-gradient(90deg, rgba(224, 66, 66, 0.85) 0%, rgba(224, 66, 66, 1) 100%);
+        background: linear-gradient(90deg, rgba(224, 66, 66, 0.95) 0%, rgba(224, 66, 66, 1) 100%);
 
         .small-title{
-            font-size: 24.5px;
+            font-size: 37px;
             transition: 0.5s;
         }
 
@@ -169,12 +189,6 @@ section{
     justify-content: space-between;
     flex-grow: 1;
     flex-wrap: wrap;
-
-    margin-top: 100px;
-
-    .small-title{
-        height: 60px;
-    }
 }
 
 .personal-grid{
@@ -184,6 +198,8 @@ section{
 
     align-items: center;
     justify-items: center;
+
+    margin-top: 5px;
 
     gap: 2%;
 
@@ -212,7 +228,9 @@ section{
 .personal-container .small-title{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    height: 100px;
+    margin-bottom: 5px;
 }
 
 .name-img{
@@ -226,6 +244,8 @@ section{
     p{
         font-size: 18px;
         font-weight: bold;
+
+
         transition: font-size 0.5s;
     }
 
@@ -255,6 +275,8 @@ section{
     
     transition: 0.3s ease;
 
+
+    font-weight: normal;
     font-size: 16px;
 }
 
@@ -273,7 +295,7 @@ section{
 }
 .personal-container:has(.personal-future:hover){
     .small-title{
-        font-size: 24.5px;
+        font-size: 37px;
         transition: 0.5s;
     }
 }
@@ -281,21 +303,32 @@ section{
 .personal-future:hover{
     color: white;
     background: rgb(224, 66, 66);
-    transition: 0.5s;
 
     box-shadow: 5px 7px 8px -1px rgba(176, 176, 176, 0.54);
-    bottom: 2.5px;
-    
+    bottom: 5px;
+
+    transition: 0.5s;
+
+    .startext{
+        color: black;
+        transition: 0.5s;
+    }
+
     .name-img p{
         font-size: 18.25px;
         transition: font-size 0.5s;
     }
 
     .name-img .hidden-info{
-        color: #dfdfdf;
+        color: #ebebeb;
         font-size: 16.25px;
 
-        transition: font-size 0.5s;
+        transition: 0.5s;
+    }
+
+    .button{
+        background-color: rgb(28, 28, 28);
+        transition: 0.5s
     }
 }
 
@@ -305,22 +338,28 @@ section{
     height: 12%;
     width: 125px;
 
-    background-color: rgb(28, 28, 28);
+    font-weight: bold;
+
+    /* rgb(28, 28, 28) */
+    background-color: rgb(224, 66, 66);
     color: white;
 
     border-style: solid;
-    border-color: rgb(23, 29, 47, 0.2);
-    font-weight: bold;
+    border-color: rgb(224, 66, 66, 0.2);
+    
+    transition: 0.5s;
 }
 
 .button:hover{
     border-color: white;
     border-style: solid;
+    transition: border-color 0.1s !important;
 }
 
 .button:active{
-    background-color: white;
     color: black;
+    background-color: white !important;
+    transition: 0.1s !important;
 }
 
 
@@ -330,19 +369,28 @@ section{
     background-color: rgb(224, 66, 66);
     color: white;
 
+    border-color: rgb(224, 66, 66);
+    border-style: solid;
+
     height: 25px;
     width: 100px;
+
+    transition: 0.5s;
 }
 
 #openall-button:hover{
     border-color: white;
     border-style: solid;
+
+    transition: 0.1s;
 }
 
 
 #openall-button:active{
-    background-color: white;
     color: black;
+    background-color: white;
+
+    transition: 0.1s;
 }
 
 
@@ -369,6 +417,10 @@ footer{
 
 /* Phone/Tab */
 @media (max-width: 950px){
+    .title{
+        text-align: left;
+    }
+
     .personal-grid{
         grid-template-columns: 1fr;
 
@@ -378,6 +430,7 @@ footer{
     }
 
     section{
+        margin-bottom: 80px !important;
         width: 85%;
     }
 
@@ -392,19 +445,19 @@ footer{
         width: 95%;
     }
 
+    /* .title{
+        margin-bottom: 25px;
+    } */
+
     .title div{
         width: 100%;
         right: 0%;
     }
 
     .personal-container{
-        .small-title{
-            margin-bottom: 5px;
-        }
-
         #openall-button{
             margin-left: 20px;
-            width: 80px;
+            width: 100px;
         }
     }
 
@@ -432,6 +485,6 @@ footer{
 
     #group-r{
         word-wrap: break-word;
-        overflow: auto;
+        height: 175px;
     }
 }
