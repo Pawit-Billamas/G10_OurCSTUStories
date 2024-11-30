@@ -135,12 +135,22 @@ body {
         display: block;
         text-align: center;
     }
+
+    video {
+        width: 90%; 
+        max-width: 500px; 
+    }
 }
 
 @media (max-width: 480px) {
     .introtext {
         text-align: center;
         padding: 0.5rem;
+    }
+
+    video {
+        width: 95%; 
+        max-width: 400px;
     }
 }
 
@@ -162,18 +172,23 @@ body {
 }
 
 video {
-    max-width: 100%; 
-    max-height: 100%; 
+    width: 80%; 
+    height: auto; 
+    max-width: 600px; 
     cursor: pointer;
+    border-radius: 0px; 
   }
 
 .container {
-    width: 90%; 
+    width: 100%;
     max-width: 800px; 
-    height: auto;
-    display: grid;
-    place-items: center;
-    padding: 0%; 
+    height: auto; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+    margin: 0 auto; 
+    box-sizing: border-box;
   }
 
   .headmember,
