@@ -14,9 +14,93 @@
 }
 
 body {
-    background: rgba(0, 0, 0, 0.7) url(image/background.jpg);
+    background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);
     background-blend-mode: darken;
     display: grid;
     align-items: center;
     margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative; 
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Poppins';
+    flex-wrap: wrap;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: white;
+    margin: 20px; 
+    font-size: 14px;
+}
+
+.nav-left a::before {
+    content: "•"; 
+    margin-right: 5px;
+    color: white;
+}
+
+.nav-center {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.nav-center span {
+    font-size: 16px;
+    text-align: center;
+}
+
+.nav-right .join-btn {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(248, 38, 38);
+    padding: 8px 20px;
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-right .join-btn:hover {
+    background-color: #ff3333;
+}
+.journey-highlight {
+    color: rgb(255, 252, 240);
+    font-family: 'Marcellus';
+
+    position: relative;
+    font-size: 45px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 25px;
+    
+    font-weight: bold;
+    text-align: center;
+
+    color: white;
+}
+.startext {
+    color: rgb(248, 38, 38);
+    font-weight: bold;
 }
