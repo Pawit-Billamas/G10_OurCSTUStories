@@ -406,6 +406,10 @@ button:hover {
     border-radius: 5px;
     color: black;
 }
+
+#button_clear{  
+    float:right;
+}
   
 @media (max-width: 600px) {
     input, textarea, button {
