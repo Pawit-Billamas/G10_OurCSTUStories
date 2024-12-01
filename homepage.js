@@ -7,24 +7,22 @@ function myFunction() {
     }
   }  
 
-
-
   document.addEventListener('DOMContentLoaded', function () {
     const savedEntries = JSON.parse(localStorage.getItem('guestbookEntries')) || [];
     const entriesList = document.getElementById('entries-list');
 
-    // แสดงทุก entries ที่บันทึก
+    entriesList.innerHTML = '';
     savedEntries.forEach(entry => {
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `
-        <strong>Name:</strong> ${entry.name} <br>
-        <strong>Email:</strong> ${entry.email} <br>
-        <strong>Message:</strong> ${entry.message} <br>
-        <strong>Suggestions:</strong> ${entry.suggestions}
-      `;
-      entriesList.appendChild(listItem);
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <strong>Name:</strong> ${entry.name} <br>
+            <strong>Email:</strong> ${entry.email} <br>
+            <strong>Message:</strong> ${entry.message} <br>
+            <strong>Suggestions:</strong> ${entry.suggestions}
+        `;
+        entriesList.appendChild(listItem);
     });
-  });
+});
 
 document.getElementById('guestbook-form').addEventListener('submit', function (event) {
   event.preventDefault();
@@ -69,7 +67,7 @@ function validateEmail(email) {
 
 function clearEntries() {
   const password = prompt("Please enter the developer password:");
-  if (password === "Dev_Group10") { 
+  if (password === "Dev_Group10") /*รหัสที่เอาไส้ลบอยู่นี่นะเพื่อนๆ*/{ 
     if (confirm('Are you sure you want to clear all guestbook entries?')) {
       localStorage.removeItem('guestbookEntries');
       document.getElementById('entries-list').innerHTML = ''; 
