@@ -342,4 +342,65 @@ video {
 /*end member*/
 
 /*start guest book*/
+footer {
+    font-family:'Marcellus' ;
+    color: #fff;
+    padding: 20px;
+}
+  
+.guestbook {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+  
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif ;
+}
+  
+button {
+    padding: 10px;
+    background-color: #f82626;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+button:hover {
+    background-color: #f82626;
+}
+  
+#guestbook-entries ul {
+    list-style: none;
+    padding: 0;
+}
+  
+#guestbook-entries li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+  
+@media (max-width: 600px) {
+    input, textarea, button {
+      font-size: 14px;
+    }
+}
 /*end guest book*/
