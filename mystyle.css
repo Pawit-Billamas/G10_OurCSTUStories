@@ -385,7 +385,16 @@ button {
 button:hover {
     background-color: #f82626;
 }
-  
+
+#entries{   
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 #guestbook-entries ul {
     list-style: none;
     padding: 0;
@@ -395,7 +404,7 @@ button:hover {
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
-    color: #fff;
+    color: black;
 }
   
 @media (max-width: 600px) {
