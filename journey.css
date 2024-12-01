@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* General Styles */
 * {
-    /*ibossเปลี่ยนfontfam*/
+
     font-family: 'Marcellus', sans-serif;
     margin: 0;
     padding: 0;
@@ -20,10 +20,7 @@ body {
     display: grid;
     align-items: center;
     margin: 0;
-
-    /*boss เพิ่ม*/
     font-family: 'Marcellus';
-    /* font-family: Arial, Helvetica, sans-serif; */
     padding: 0;
     width: 100%;
     color: white;
@@ -39,8 +36,7 @@ body {
     margin-bottom: 25px;
     font-weight: bold;
     text-align: center;
-
-    margin-bottom: 30px;/*boss add margin*/
+    margin-bottom: 30px;
 }
 .startext {
     color: rgb(248, 38, 38);
@@ -95,15 +91,21 @@ body {
 }
 
 .container .box-container .box p{
-    color:#ff0000;
+    color:#3a3a3a;
     font-size: 15px;
     line-height: 1.8;
 }
 .para{
     font-size: 15px;
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 .Year{
-    font-size: 2rem;
+    font-size: 1.75rem;
+    font-family:'Marcellus' ;
+    font-weight: 900;
+    color: rgb(248, 38, 38);
 }
 
 .container .box-container .box:hover{
@@ -154,19 +156,18 @@ body {
     overflow: hidden;
     background: #fafafa;
     color: #333;
-    text-align: center;
+    text-align: left;
     transform: rotateY(180deg);
 }
   
-.thefront h1, .theback h1{
-    font-family: 'zilla slab', sans-serif;
+.thefront h1{
+    font-family:'Marcellus' ;
     padding: 2%;
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 50px;
     text-align: center;
 }
   
-.thefront p, .theback p{
+.thefront p{
     font-family: 'zilla slab', sans-serif;
     padding: 5%;
     font-weight: normal;
@@ -206,7 +207,13 @@ body {
         font-size: 1rem;
     }
     .theback p{
-        font-size: 10px;
+        font-size: 7px;
+    }
+    .thefront h1{
+        font-family:'Marcellus' ;
+        padding: 2%;
+        font-size: 35px;
+        text-align: center;
     }
 }
 
@@ -283,7 +290,13 @@ body {
         margin-right: 0;
     }
     .theback p{
-        font-size: 8px;
+        font-size: 7px;
+    }
+    .thefront h1{
+        font-family:'Marcellus' ;
+        padding: 2%;
+        font-size: 25px;
+        text-align: center;
     }
 }
 
@@ -308,29 +321,11 @@ body {
 }
 
 .group-grid{
-    /*bossเอาออก
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr;*/
-
     div{
         padding: 15px;
         box-sizing: border-box;
         align-content: center;
     }
-
-    /*p{  
-        margin: 0;
-        padding: 10px;
-        padding-top: auto;
-        padding-bottom: auto;
-        color: #262d3f;
-        width: auto;
-
-        box-sizing: border-box;
-
-        font-size: 20px;
-    }*/
 }
 
 #group-l{
@@ -356,10 +351,8 @@ body {
 
 .group:hover{
     #group-r{
-        /* background-color: #262e42; */
         p{
             font-size: 16.25px;
-            /* color: #d0d0da; */
             transition: 0.5s;
         }
 
@@ -378,15 +371,11 @@ body {
 
 .small-title{
     font-size: 36px;
-
     padding: 5px 0;
     box-sizing: border-box;
-
     z-index: 10;
-
     color: white;
     font-weight: bold;
-
     transition: 0.5s;
 
     p{
@@ -411,7 +400,6 @@ body {
 
 section{
     padding: 10px;
-
     height: auto;
     width: 1100px;
     margin-left: auto;
