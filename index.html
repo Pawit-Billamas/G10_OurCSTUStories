@@ -5,101 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Collage</title>
     <link rel="stylesheet" href="mystyle.css">
-    <link rel="stylesheet" href="profiles.css">
+    <link rel="stylesheet" href="homepage.js">
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Marcellus&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-left">
-            <a href="#">HOME PAGE</a>
-            <a href="#">OUR JOURNEY</a>
-            <a href="#">OUR FUTURE</a>
-        </div>
-        <div class="nav-center">
-            <span>۶ৎ COMPUTER SCIENCE TU</span>
-        </div>
-        <div class="nav-right">
-            <a href="#" class="join-btn">Join ERC <span class="globe">🌐</span></a>
-        </div>
-    </nav>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="link-110 active no-hover">CS<span class="startext">𓇼</span>TU Stories</a>
+        <a href="index.html" class="link-110">Home</a>
+        <a href="journey.html" class="link-110">Journey</a>
+        <a href="future.html" class="link-110">Future</a>
+        <a href="javascript:void(0);" class="icon link-110" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>    
+
+    <script src="homepage.js"></script>
 
     <div class="group10">
         <h1>GROUP<span class="startext">✦</span>10</h1>
         <div class="introtext">
-            <p>Discover our journey and vision for the future. Join us as we shape what's next.</p>
+            <div class="box1">Discover our journey and vision for the future.</div>
+            <div class="box2">Join us as we shape what's next.</div>
         </div>
-        <div class="container">
-            <video src="image/vid.mov" loop onmouseover="this.play();" onmouseout="this.pause();"></video>
+        <div class="indexcontainer">
+            <div class="vidbackground-image"></div>
+            <video src="image/vid.mp4" loop onmouseover="this.play();" onmouseout="this.pause();"></video>
         </div>    
     </div>
 
+    <div class="headguestbook">
+        <h1><span class="startext">⭑</span>MEMBERS<span class="startext">⭑</span></h1>
+    </div>
 
     <div class="box-containers">
-        <div class="box-baby"><img class="baby" src="image/profile-san.jpg">
+        <div class="box-baby"><img class="baby" src="image/pic_toktak.jpg">
             <div class="info">
-                <p>Hasan Cheha</p>
-                <p>San</p>
-                <p>Student ID</p>
+                <p>Kuntorn Yuenyongchaiwat</p>
+                <p>Toktak</p>
+                <p>Student ID :</p>
                 <p>6709681198</p>
             </div>
         </div>
 
-        <div class="box-baby"><img class="baby" src="image/wit01.png">
+        <div class="box-baby"><img class="baby" src="image/pic_san.jpg">
             <div class="info">
-                <p>Pawit Billamas</p>
-                <p>Wit</p>
-                <p>Student ID</p>
-                <p>6709616780</p>
+                <p>Hasan Cheha</p>
+                <p>San</p>
+                <p>Student ID :</p>
+                <p>6709681198</p>
             </div>
         </div>
 
-        <div class="box-baby"><img class="baby" src="image/fah01.jpg">
-            <div class="info">
-                <p>Prayfah Phourphan</p>
-                <p>Fah</p>
-                <p>Student ID</p>
-                <p>6709616616</p>
-            </div>
-        </div>
-
-        <div class="box-baby"><img class="baby" src="image/golf01.jpg">
-            <div class="info">
-                <p>Phatsakorn Pornpikanate</p>
-                <p>Golf</p>
-                <p>Student ID</p>
-                <p>6709681131</p>
-            </div>
-        </div>
-
-        <div class="box-baby"><img class="baby" src="image/toktak01.jpg">
-            <div class="info">
-                <p>Kuntorn Yuenyongchaiwat</p>
-                <p>Toktak</p>
-                <p>Student ID</p>
-                <p>6709420019</p>
-            </div>
-        </div>
-
-        <div class="box-baby"><img class="baby" src="image/boss01.jpg">
+        <div class="box-baby"><img class="baby" src="image/pic_boss.jpg">
             <div class="info">
                 <p>Patcharaphol Sriprasert</p>
                 <p>Boss</p>
-                <p>Student ID</p>
+                <p>Student ID :</p>
                 <p>6709616707</p>
             </div>
         </div>
 
-    </div>
+        <div class="box-baby"><img class="baby" src="image/pic_witt.png">
+            <div class="info">
+                <p>Pawit Billamas</p>
+                <p>Wit</p>
+                <p>Student ID :</p>
+                <p>6709616780</p>
+            </div>
+        </div>
 
-    <div class="guestbook">
-        <div class="headguestbook">
-            <h1>GUEST<span class="startext">𓇼</span>BOOK</h1>
+        <div class="box-baby"><img class="baby" src="image/pic_golf.jpg">
+            <div class="info">
+                <p>Phatsakorn Pornpikanate</p>
+                <p>Golf</p>
+                <p>Student ID :</p>
+                <p>6709681131</p>
+            </div>
+        </div>
+
+        <div class="box-baby"><img class="baby" src="image/pic_fah.jpg">
+            <div class="info">
+                <p>Prayfah Phourphan</p>
+                <p>Fah</p>
+                <p>Student ID :</p>
+                <p>6709616616</p>
+            </div>
         </div>
     </div>
 
+    <footer>
+        <div class="guestbook">
+            <div class="headguestbook">
+                <h1>GUEST<span class="startext">𓇼</span>BOOK</h1>
+            </div>
+
+            <form id="guestbook-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Message for the creator" rows="4" required></textarea>
+        
+                <label for="suggestions">Suggestions:</label>
+                <textarea id="suggestions" name="suggestions" placeholder="Your suggestions" rows="4" required></textarea>
+        
+                <button type="submit">Submit</button>
+            </form>
+
+
+            <div id="guestbook-entries">
+                <div class="headguestbook">
+                  <h1>GUEST<span class="startext">𓇼</span>BOOK<br>ENTRIES</h1>
+                </div>
+                
+                <div id="entries">
+                    <ul id="entries-list"></ul>
+                </div>
+
+                <button id="button_clear" onclick="clearEntries()">Clear All Entries</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="homepage.js"></script>
 
 </body>
 </html>
