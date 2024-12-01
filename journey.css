@@ -95,7 +95,7 @@ body {
 }
 
 .container .box-container .box p{
-    color:#777;
+    color:#ff0000;
     font-size: 15px;
     line-height: 1.8;
 }
@@ -138,7 +138,7 @@ body {
     border-radius: 10px;
     backface-visibility: hidden;
     overflow: hidden;
-    background: #ffc728;
+    background: rgb(248, 108, 108);
     color: #000;
 }
   
