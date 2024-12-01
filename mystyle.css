@@ -1,36 +1,4 @@
-/*start group10 ฟ้าทำ*/
-
-body {
-    background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);
-    background-blend-mode: darken;
-    align-items: center;
-    margin: 0;
-    display: grid;
-}
-
-.group10 {
-    text-align: center;
-    font-size: 4vw; 
-    color: rgb(255, 252, 240);
-    font-family: 'Marcellus';
-    flex: auto;
-    padding: 0%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.group10 h1 {
-    margin: 0; 
-    font-weight: bold;
-}
-
-.startext {
-    color: rgb(248, 38, 38);
-    font-weight: bold;
-}
-  
+/*start navbar*/
 .topnav {
     overflow: hidden;
     font-family:'Marcellus' ;
@@ -113,31 +81,8 @@ body {
       text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px rgb(248, 38, 38), 0 0 20px rgb(248, 38, 38), 0 0 30px rgb(248, 38, 38);
     }
 }
-  
-  
-
-@media (min-width: 1025px) {
-    .introtext {
-        font-size: 0.9rem;
-        text-align: center;
-        padding: 0rem;
-        display: flex;
-    }
-}
-
-@media (max-width: 1024px) {
-    .introtext {
-        text-align: center;
-        display: flex;
-    }
-}
 
 @media (max-width: 768px) {
-    .introtext {
-        display: grid;
-        padding: 0.6rem;
-    }
-
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -162,6 +107,63 @@ body {
         float: none;
         display: block;
         text-align: center;
+    }
+}
+/*end navbar*/
+
+
+/*start group10 ฟ้าทำ*/
+body {
+    background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);
+    background-blend-mode: darken;
+    align-items: center;
+    margin: 0;
+    display: grid;
+}
+
+.group10 {
+    text-align: center;
+    font-size: 4vw; 
+    color: rgb(255, 252, 240);
+    font-family: 'Marcellus';
+    flex: auto;
+    padding: 0%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.group10 h1 {
+    margin: 0; 
+    font-weight: bold;
+}
+
+.startext {
+    color: rgb(248, 38, 38);
+    font-weight: bold;
+}
+
+@media (min-width: 1025px) {
+    .introtext {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 0rem;
+        display: flex;
+    }
+}
+
+@media (max-width: 1024px) {
+    .introtext {
+        text-align: center;
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .introtext {
+        display: grid;
+        padding: 0.6rem;
     }
 
     .vidbackground-image {
@@ -261,11 +263,10 @@ video {
     padding: 3px;
     text-align: center;
 }
-
 /*end group10 ฟ้าทำ*/
 
-/*start member*/
 
+/*start member*/
 .baby{
     width: 100%; 
     max-width: 300px;
@@ -338,5 +339,7 @@ video {
         font-size: 0.9rem; 
     }
 }
-
 /*end member*/
+
+/*start guest book*/
+/*end guest book*/
