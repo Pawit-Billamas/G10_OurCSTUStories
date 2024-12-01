@@ -47,7 +47,7 @@ body {
     font-weight: bold;
 }
 .box {
-    height: 600px;
+    height: 500px;
     width: 300px;
 }
 
@@ -100,7 +100,7 @@ body {
     line-height: 1.8;
 }
 .para{
-    font-size: 10px;
+    font-size: 15px;
 }
 .Year{
     font-size: 2rem;
@@ -160,7 +160,7 @@ body {
   
 .thefront h1, .theback h1{
     font-family: 'zilla slab', sans-serif;
-    padding: 30px;
+    padding: 2%;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
@@ -168,7 +168,7 @@ body {
   
 .thefront p, .theback p{
     font-family: 'zilla slab', sans-serif;
-    padding: 30px;
+    padding: 5%;
     font-weight: normal;
     font-size: 12px;
     text-align: center;
@@ -186,11 +186,27 @@ body {
     .journey-highlight {
         font-size: 20px;
       }
+      .Year{
+        font-size: 1.75rem;
+    }
 }
 
 @media (max-width:768px){
     .container{
         padding:20px;
+    }
+    .container .box-container .box img{
+        height: 270px;
+        width: 185px;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Year{
+        font-size: 1rem;
+    }
+    .theback p{
+        font-size: 10px;
     }
 }
 
@@ -243,10 +259,6 @@ body {
 
 @media (max-width: 480px) {
 
-    .container .box-container .box img{
-        width: 100%;
-    }
-
     .nav-center span {
         font-size: 14px;
     }
@@ -269,6 +281,9 @@ body {
     .journey-highlight{
         margin-left: 0;
         margin-right: 0;
+    }
+    .theback p{
+        font-size: 8px;
     }
 }
 
