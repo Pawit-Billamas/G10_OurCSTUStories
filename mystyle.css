@@ -218,7 +218,7 @@ video {
     z-index: 1; 
   }
 
-.container {
+.indexcontainer {
     position: relative; 
     width: 90%;
     max-width: 800px;
