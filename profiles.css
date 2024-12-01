@@ -4,6 +4,7 @@ body{
 }
 .baby{
     width: 300px;
+    height: 350px;
 }
 .box-baby:hover .baby{
     filter: blur(5px);
@@ -24,7 +25,7 @@ body{
     bottom: 0px;
     right: 0px;
     opacity: 0;
-    z-index: 99;
+    z-index: 2;
 }
 .info:hover{
     position: absolute;
@@ -36,7 +37,7 @@ body{
     right: 0px;
     opacity: 0.8;
     transition: 0.8s;
-    z-index: 99;
+    z-index: 2;
 }
 .box-containers{
     width: 100%;
