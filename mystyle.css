@@ -373,6 +373,32 @@ input, textarea {
     font-size: 16px;
     font-family: 'Poppins', sans-serif ;
 }
+
+.star-rating {
+    display: inline-flex;
+    font-size: 23px;
+    margin-top: 10px;
+    direction: rtl;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star {
+    cursor: pointer;
+    color: lightgray;
+    transition: color 0.2s;
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: gold;
+}
+
+.star-rating input[type="radio"]:checked ~ label.star {
+    color: gold;
+}
   
 button {
     padding: 10px;
