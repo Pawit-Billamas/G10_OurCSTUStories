@@ -7,7 +7,7 @@
     top: 0;
     z-index: 100;
 
-    background: rgba(0, 0, 0, 0.75) url(image/background1.jpg);
+    background-color: #080808;
     background-blend-mode: darken;
 }
   
@@ -128,7 +128,8 @@
 
 /*start group10 ฟ้าทำ*/
 body {
-    background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);
+    background-color: #080808;
+    /*background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);*/
     background-blend-mode: darken;
     align-items: center;
     margin: 0;
@@ -304,16 +305,18 @@ video {
 }
 
 .info {
+    font-family: 'Marcellus';
     position: absolute;
     font-size: 1.5rem; 
     text-align: center;
-    color: rgb(223, 16, 33);
+    color: rgb(255, 255, 255);
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     opacity: 0;
     z-index: 99;
+    font-weight: bold ;
 }
 
 .info:hover {
