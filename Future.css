@@ -12,8 +12,6 @@ body{
     /* font-family: Arial, Helvetica, sans-serif; */
 }
 
-
-
 section{
     padding: 10px;
 
@@ -29,7 +27,7 @@ section{
 
 .title{
     position: relative;
-    font-size: 60px;
+    font-size: 90px;
     /* font-size: 2em !important;  */
 
     margin-left: auto;
@@ -41,8 +39,10 @@ section{
     margin-bottom: 120px;
     
     font-weight: bold;
+    box-sizing: border-box;
+    width: 100%;
 
-    color: white;
+    color: rgb(255, 252, 240);
 
     div{
         position: absolute;
@@ -53,6 +53,14 @@ section{
         height: 120%;
         width: 1200px;
         /* background-color: rgb(224, 66, 66); */
+    }
+
+    .startext:nth-child(1){
+        margin-right: 3.5px;
+    }
+
+    .startext:nth-child(2){
+        margin-left: 3.5px;
     }
 }
 
@@ -75,6 +83,8 @@ section{
         .startext{
             width: 10px;
             height: 10px;
+
+            margin-left: 3.5px;
         }
     }
 
@@ -146,11 +156,12 @@ section{
     transition: 0.5s;
 
     p{
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 30px;
 
-        font-size: 16px;
+        font-size: 18px;
         color: #272727;
+
+        transition: 0.5s;
     }
 }
 
@@ -159,7 +170,7 @@ section{
     #group-r{
         /* background-color: #262e42; */
         p{
-            font-size: 16.25px;
+            font-size: 18.25px;
             /* color: #d0d0da; */
             transition: 0.5s;
         }
@@ -181,6 +192,8 @@ section{
 /*==== Personal ====*/
 .personal{
     width: 100%;
+
+    box-sizing: border-box;
 }
 
 .personal-container{
@@ -189,6 +202,7 @@ section{
     justify-content: space-between;
     flex-grow: 1;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .personal-grid{
@@ -245,7 +259,6 @@ section{
         font-size: 18px;
         font-weight: bold;
 
-
         transition: font-size 0.5s;
     }
 
@@ -254,6 +267,8 @@ section{
         width: 175px;
         height: 175px;
         border-style: none;
+
+        object-fit: cover;
 
         border-radius: 5px;
 
@@ -267,17 +282,17 @@ section{
     position: absolute;
 
     top: 20%;
-    word-wrap: break-word;
     overflow: auto;
 
     opacity: 0;
     color:#272727;
     
-    transition: 0.3s ease;
-
-
+    word-wrap: break-word;
     font-weight: normal;
     font-size: 16px;
+    line-height: 1.6;
+
+    transition: 0.3s ease;
 }
 
 .name-img.active{
@@ -320,7 +335,7 @@ section{
     }
 
     .name-img .hidden-info{
-        color: #ebebeb;
+        color: white;
         font-size: 16.25px;
 
         transition: 0.5s;
@@ -334,6 +349,11 @@ section{
 
 
 .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
     font-size: 12px;
     height: 12%;
     width: 125px;
@@ -366,14 +386,18 @@ section{
 #openall-button{
     border-style: none;
 
-    background-color: rgb(224, 66, 66);
+    background-color: rgb(248, 38, 38);
     color: white;
 
-    border-color: rgb(224, 66, 66);
+    border-color: rgb(248, 38, 38);
     border-style: solid;
 
     height: 25px;
     width: 100px;
+
+    text-wrap: nowrap;
+
+    margin-left: 2.5px;
 
     transition: 0.5s;
 }
@@ -418,7 +442,7 @@ footer{
 /* Phone/Tab */
 @media (max-width: 950px){
     .title{
-        text-align: left;
+        font-size: 45px;
     }
 
     .personal-grid{
@@ -445,9 +469,9 @@ footer{
         width: 95%;
     }
 
-    /* .title{
-        margin-bottom: 25px;
-    } */
+    .title{
+        text-align: left;
+    }
 
     .title div{
         width: 100%;
@@ -456,13 +480,17 @@ footer{
 
     .personal-container{
         #openall-button{
-            margin-left: 20px;
             width: 100px;
         }
     }
 
     .personal-future{
         padding: 10px;
+        height: 375px;
+        
+        .hidden-info{
+            font-size: 15px;
+        }
     }
 
     .group{
