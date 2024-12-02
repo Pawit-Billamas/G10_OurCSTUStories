@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class="box-baby"><img class="baby" src="image/baby1.jpg">
+        <div class="box-baby"><img class="baby" src="image/pic_san.jpg">
             <div class="info">
                 <p>Hasan Cheha</p>
                 <p>San</p>
@@ -108,14 +108,32 @@
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
         
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-        
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Message for the creator" rows="4" required></textarea>
         
                 <label for="suggestions">Suggestions:</label>
                 <textarea id="suggestions" name="suggestions" placeholder="Your suggestions" rows="4" required></textarea>
+
+                <div>
+                    <label for="rating">Rating:</label>
+                    <div class="star-rating">
+                    
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5" class="star">★</label>
+    
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" class="star">★</label>
+                    
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" class="star">★</label>
+    
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" class="star">★</label>
+    
+                    <input type="radio" id="star1" name="rating" value="1" >
+                    <label for="star1" class="star">★</label>
+                    </div>
+                </div>
         
                 <button type="submit">Submit</button>
             </form>
@@ -132,6 +150,22 @@
 
                 <button id="button_clear" onclick="clearEntries()">Clear All Entries</button>
             </div>
+        </div>
+    </footer>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-backtotop">
+                <a href="#top" class="backtotop-btn">Back To Top</a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>We are students from the Department of Computer Science, Thammasat University.</p>
+            </div>
+            <p>&copy; 2024 G10_CSTU | CS𓇼TU Stories. All rights reserved.</p>
         </div>
     </footer>
 

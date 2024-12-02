@@ -28,15 +28,16 @@ section{
 .title{
     position: relative;
     font-size: 90px;
+
     /* font-size: 2em !important;  */
 
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 
-    padding: 0 20px;
+    padding:0%;
 
-    margin-bottom: 120px;
+    margin-bottom: 2%;
     
     font-weight: bold;
     box-sizing: border-box;
@@ -44,7 +45,7 @@ section{
 
     color: rgb(255, 252, 240);
 
-    div{
+    div {
         position: absolute;
         right: 50%;
         top: -10%;
@@ -417,13 +418,6 @@ section{
     transition: 0.1s;
 }
 
-
-footer{
-    background-color: black;
-    width: 100%;
-    height: 40px;
-}
-
 /* Tab */
 @media (max-width: 1400px){
     section{
@@ -442,7 +436,10 @@ footer{
 /* Phone/Tab */
 @media (max-width: 950px){
     .title{
+
         font-size: 45px;
+        text-align: center;
+        font-size: 7vw;
     }
 
     .personal-grid{
@@ -516,3 +513,66 @@ footer{
         height: 175px;
     }
 }
+
+/* footer close */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.footer-container div {
+    max-width: 300px;
+    margin: 10px;
+}
+
+.footerbackto-top h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #f82626;
+}
+
+.footer-about {
+    margin-top: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+.footer-about h3 {
+    color: #f82626;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.backtotop-btn {
+    display: inline-block;
+    background-color: #f82626;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.backtotop-btn:hover {
+    background-color: #f82626;
+}
+/* end footer close */

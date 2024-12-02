@@ -7,7 +7,7 @@ function myFunction() {
     }
   }  
 
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function () { 
     const savedEntries = JSON.parse(localStorage.getItem('guestbookEntries')) || [];
     const entriesList = document.getElementById('entries-list');
 
@@ -16,58 +16,69 @@ function myFunction() {
         const listItem = document.createElement('li');
         listItem.innerHTML = `
             <strong>Name:</strong> ${entry.name} <br>
-            <strong>Email:</strong> ${entry.email} <br>
             <strong>Message:</strong> ${entry.message} <br>
-            <strong>Suggestions:</strong> ${entry.suggestions}
+            <strong>Suggestions:</strong> ${entry.suggestions} <br>
+            <strong>Rating:</strong> ${'★'.repeat(entry.rating)}${'☆'.repeat(5 - entry.rating)}
         `;
         entriesList.appendChild(listItem);
     });
+
+    const starInputs = document.querySelectorAll('input[name="rating"]');
+    const ratingDisplay = document.createElement('div');
+    ratingDisplay.id = 'rating-display';
+    document.querySelector('.star-rating-container').appendChild(ratingDisplay);
+
+    // อัปเดตการแสดงผลเมื่อผู้ใช้เลือกดาว
+    starInputs.forEach(input => {
+        input.addEventListener('change', function () {
+            const selectedRating = this.value; // ค่าดาวที่เลือก
+            ratingDisplay.innerHTML = `${'★'.repeat(selectedRating)}${'☆'.repeat(5 - selectedRating)}<br>You selected: ${selectedRating} star${selectedRating > 1 ? 's' : ''}`;
+        });
+    });
 });
 
-document.getElementById('guestbook-form').addEventListener('submit', function (event) {
-  event.preventDefault();
+  document.getElementById('guestbook-form').addEventListener('submit', function (event) {
+      event.preventDefault();
 
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const suggestions = document.getElementById('suggestions').value.trim();
+    const name = document.getElementById('name').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const suggestions = document.getElementById('suggestions').value.trim();
+    const rating = document.querySelector('input[name="rating"]:checked');
 
-  if (!name || !email || !message || !suggestions) {
-    alert('All fields are required!');
-    return;
-  }
+    if (!name || !message || !suggestions || !rating) {
+        alert('All fields are required, including Rating!');
+        return;
+    }
 
-  if (!validateEmail(email)) {
-    alert('Please enter a valid email address.');
-    return;
-  }
+    const entry = { 
+        name, 
+        message, 
+        suggestions,
+        rating: parseInt(rating.value, 10)
+    };
 
-  const entry = { name, email, message, suggestions };
-  const entriesList = document.getElementById('entries-list');
-  const listItem = document.createElement('li');
-  listItem.innerHTML = `
-    <strong>Name:</strong> ${name} <br>
-    <strong>Email:</strong> ${email} <br>
-    <strong>Message:</strong> ${message} <br>
-    <strong>Suggestions:</strong> ${suggestions}
-  `;
-  entriesList.appendChild(listItem);
+    const entriesList = document.getElementById('entries-list');
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `
+        <strong>Name:</strong> ${name} <br>
+        <strong>Message:</strong> ${message} <br>
+        <strong>Suggestions:</strong> ${suggestions} <br>
+        <strong>Rating:</strong> ${'★'.repeat(entry.rating)}${'☆'.repeat(5 - entry.rating)}
+    `;
+    entriesList.appendChild(listItem);
 
-  const savedEntries = JSON.parse(localStorage.getItem('guestbookEntries')) || [];
-  savedEntries.push(entry);
-  localStorage.setItem('guestbookEntries', JSON.stringify(savedEntries));
+    const savedEntries = JSON.parse(localStorage.getItem('guestbookEntries')) || [];
+    savedEntries.push(entry);
+    localStorage.setItem('guestbookEntries', JSON.stringify(savedEntries));
 
-  document.getElementById('guestbook-form').reset();
+    document.getElementById('guestbook-form').reset();
+
+    document.getElementById('rating-display').innerHTML = '';
 });
-
-function validateEmail(email) {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailPattern.test(email);
-}
 
 function clearEntries() {
   const password = prompt("Please enter the developer password:");
-  if (password === "Dev_Group10") /*รหัสที่เอาไส้ลบอยู่นี่นะเพื่อนๆ*/{ 
+  if (password === "Dev_Group10") /*รหัสที่เอาไว้ลบอยู่นี่นะเพื่อนๆ*/{ 
     if (confirm('Are you sure you want to clear all guestbook entries?')) {
       localStorage.removeItem('guestbookEntries');
       document.getElementById('entries-list').innerHTML = ''; 
