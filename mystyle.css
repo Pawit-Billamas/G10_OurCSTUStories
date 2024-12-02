@@ -421,10 +421,24 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+
+    border-color: rgb(248, 38, 38);
+    border-width: 1.5px;
+    border-style: solid;
+    transition: .5s;
 }
   
 button:hover {
     background-color: #f82626;
+    border-color: white;
+    transition: .1s;
+}
+
+button:active {
+    background-color: #f82626e0;
+    border-color: white;
+
+    transition: 0.1s;
 }
 
 #entries{   
@@ -521,9 +535,23 @@ button:hover {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #f82626;
+    transition: .5s;
 }
 
 .backtotop-btn:hover {
     background-color: #f82626;
+    border-color: white;
+    transition: .1s;
+}
+
+.backtotop-btn:active {
+    background-color: #f82626e0;
+    border-color: white;
+
+    transition: 0.1s;
 }
 /* end footer close */

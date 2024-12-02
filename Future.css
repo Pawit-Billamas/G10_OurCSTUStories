@@ -413,9 +413,9 @@ section{
 
 
 #openall-button:active{
-    color: black;
     background-color: white;
-
+    color: black
+    ;
     transition: 0.1s;
 }
 
@@ -521,7 +521,7 @@ section{
 }
 
 /* footer close */
-.footer-container {
+/* .footer-container {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -580,5 +580,5 @@ section{
 
 .backtotop-btn:hover {
     background-color: #f82626;
-}
+} */
 /* end footer close */
