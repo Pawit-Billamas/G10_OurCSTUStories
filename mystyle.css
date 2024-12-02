@@ -55,7 +55,7 @@
     right: 0;
     bottom: 0;
     border-radius: 5px;
-    background: linear-gradient(90deg, #f09a1a, #e49191, #e06f3b, #ff9a00);
+    background: linear-gradient(90deg, rgb(248, 38, 38), transparent, #000000, rgb(248, 38, 38));
     background-size: 300% 300%;
     animation: border-glow 3s linear infinite;
     z-index: -1;
