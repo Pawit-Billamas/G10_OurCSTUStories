@@ -304,16 +304,18 @@ video {
 }
 
 .info {
+    font-family: 'Marcellus';
     position: absolute;
     font-size: 1.5rem; 
     text-align: center;
-    color: rgb(223, 16, 33);
+    color: rgb(255, 255, 255);
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     opacity: 0;
     z-index: 99;
+    font-weight: bold ;
 }
 
 .info:hover {
