@@ -215,6 +215,13 @@ body {
         font-size: 35px;
         text-align: center;
     }
+    /*ลดขนาดtext*/
+    .para{
+        font-size: 12px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
 }
 
 @media (max-width: 768px) {
