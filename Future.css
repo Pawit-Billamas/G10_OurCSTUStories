@@ -12,9 +12,11 @@ body{
     /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+
 section{
     padding: 10px;
 
+    min-height: auto;
     height: auto;
     width: 1100px;
     margin-left: auto;
@@ -35,9 +37,10 @@ section{
     margin-right: auto;
     text-align: center;
 
-    padding:0%;
+    padding:0;
 
-    margin-bottom: 2%;
+    margin-top: 0;
+    margin-bottom: 55px;
     
     font-weight: bold;
     box-sizing: border-box;
@@ -70,7 +73,7 @@ section{
 
     padding: 5px 0;
     box-sizing: border-box;
-
+    height: auto;
     z-index: 10;
 
     color: white;
@@ -192,18 +195,15 @@ section{
 
 /*==== Personal ====*/
 .personal{
-    width: 100%;
 
-    box-sizing: border-box;
-}
-
-.personal-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1;
-    flex-wrap: wrap;
     box-sizing: border-box;
+    height: auto !important;
+
+    margin-top: 50px;
+
 }
 
 .personal-grid{
@@ -215,8 +215,9 @@ section{
     justify-items: center;
 
     margin-top: 5px;
+    height: auto !important;
 
-    gap: 2%;
+    gap: 50px;
 
 }
 
@@ -240,7 +241,7 @@ section{
     transition: 0.5s;
 }
 
-.personal-container .small-title{
+.personal .small-title{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -309,7 +310,7 @@ section{
 
     
 }
-.personal-container:has(.personal-future:hover){
+.personal:has(.personal-future:hover){
     .small-title{
         font-size: 37px;
         transition: 0.5s;
@@ -436,22 +437,27 @@ section{
 /* Phone/Tab */
 @media (max-width: 950px){
     .title{
-
-        font-size: 45px;
         text-align: center;
         font-size: 7vw;
+        font-size: 40px;
     }
+
+    .personal{
+        height: auto;
+    }
+
 
     .personal-grid{
         grid-template-columns: 1fr;
-
+        
         .personal-future{
             padding: 20px;
         }
     }
 
     section{
-        margin-bottom: 80px !important;
+        /* margin-bottom: 80px !important; */
+        height: auto !important;
         width: 85%;
     }
 
@@ -467,7 +473,7 @@ section{
     }
 
     .title{
-        text-align: left;
+        text-align: center;
     }
 
     .title div{
@@ -475,7 +481,7 @@ section{
         right: 0%;
     }
 
-    .personal-container{
+    .personal{
         #openall-button{
             width: 100px;
         }
@@ -510,7 +516,7 @@ section{
 
     #group-r{
         word-wrap: break-word;
-        height: 175px;
+        height: 150px;
     }
 }
 
