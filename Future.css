@@ -29,22 +29,22 @@ section{
 
 .title{
     position: relative;
-    font-size: 60px;
+    font-size: 5vw;
     /* font-size: 2em !important;  */
 
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 
-    padding: 0 20px;
+    padding:0%;
 
-    margin-bottom: 120px;
+    margin-bottom: 2%;
     
     font-weight: bold;
 
     color: white;
 
-    div{
+    div {
         position: absolute;
         right: 50%;
         top: -10%;
@@ -411,7 +411,8 @@ section{
 /* Phone/Tab */
 @media (max-width: 950px){
     .title{
-        text-align: left;
+        text-align: center;
+        font-size: 7vw;
     }
 
     .personal-grid{
