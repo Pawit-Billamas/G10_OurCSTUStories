@@ -7,7 +7,7 @@
     top: 0;
     z-index: 100;
 
-    background: rgba(0, 0, 0, 0.75) url(image/background1.jpg);
+    background-color: #080808;
     background-blend-mode: darken;
 }
   
@@ -128,7 +128,8 @@
 
 /*start group10 ฟ้าทำ*/
 body {
-    background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);
+    background-color: #080808;
+    /*background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);*/
     background-blend-mode: darken;
     align-items: center;
     margin: 0;

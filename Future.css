@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
 
-    background: rgba(0, 0, 0, 0.7) url(image/background1.jpg);
+    background-color:#080808;
     background-blend-mode: darken;
 
     color: white;
