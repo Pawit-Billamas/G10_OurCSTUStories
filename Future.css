@@ -291,7 +291,7 @@ section{
     
     word-wrap: break-word;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
 
     transition: 0.3s ease;
@@ -338,7 +338,7 @@ section{
 
     .name-img .hidden-info{
         color: white;
-        font-size: 16.25px;
+        font-size: 15.25px;
 
         transition: 0.5s;
     }

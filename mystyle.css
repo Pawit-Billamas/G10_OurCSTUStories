@@ -2,6 +2,13 @@
 .topnav {
     overflow: hidden;
     font-family:'Marcellus' ;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(0, 0, 0, 0.75) url(image/background1.jpg);
+    background-blend-mode: darken;
 }
   
 .topnav a {
@@ -20,6 +27,9 @@
   
 .topnav .icon {
     display: none;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 
 .link-110 {
@@ -93,7 +103,10 @@
     }
 
     .topnav.responsive {
-        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+
         text-align: center;
     }
 
