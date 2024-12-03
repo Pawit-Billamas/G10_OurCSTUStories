@@ -80,7 +80,7 @@ body {
 
 .container .box-container .box:hover{
     box-shadow: 0 10px 15px rgba(0,0,0,.3);
-    transform: scale(1.03);
+    transform: scale(1.15);
 }
 
 /* สร้างการ์ดหน้ากับหลัง*/
@@ -118,6 +118,7 @@ body {
     font-size: 50px;
     text-align: center;
     color: rgb(255, 252, 240);
+    border-bottom: 1px solid white;
 }
   
 .container .box-container .box p{
@@ -125,7 +126,7 @@ body {
     padding: 5%;
     font-weight: 550;
     color: rgb(255, 252, 240);
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.8;
 }
   
@@ -212,6 +213,9 @@ body {
         background: #fff;
         text-align: center;
         padding:20px 10px;
+    }
+    .container .box-container .box p{
+        font-size: 14px;
     }
 }
 
